@@ -45,7 +45,7 @@ class Component(object):
         self.subscribers = RosInterfaceSet()
         self.service_clients = RosInterfaceSet()
         self.service_servers = RosInterfaceSet()
-        self.params = RosParameterSet()
+        self.params = RosInterfaceSet() # this is wrong, we need to create a new class RosParameterSet, the ros parameter apart of name and reference has the attribute value.
 
     def dump_xtext_model(self, package=""):
         system_model_str = "        ComponentInterface { name '" + \
