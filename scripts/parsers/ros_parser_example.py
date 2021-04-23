@@ -43,24 +43,24 @@ def rossystem_parser_test():
     svr_servers = static_model.get("svr_servers")
     svr_clients = static_model.get("svr_clients")
 
-    print "Package name: %s" %package_name
-    print "Node name: %s" %node_name
+    print("Package name: {0}".format(package_name))
+    print ("Node name: {0}".format(node_name))
     if publishers is not None:
-        print "Publishers: "
+        print("Publishers: ")
         for pub in publishers:
-            print"    Name: %s Type: %s" %(pub.get("name"), pub.get("type"))
+            print("    Name: {0} Type: {1}".format(pub.get("name"),pub.get("type")))
     if subscribers is not None:
-        print "Subscribers: "
+        print("Subscribers: ")
         for sub in subscribers:
-            print"    Name: %s Type: %s" %(sub.get("name"), sub.get("type"))
+            print("    Name: {0} Type: {1}".format(sub.get("name"),sub.get("type")))
     if svr_servers is not None:
-        print "Service Servers: "
+        print("Service Servers: ")
         for svr in svr_servers:
-            print"    Name: %s Type: %s" %(svr.get("name"), svr.get("type"))
+            print("    Name: {0} Type: {1}".format(svr.get("name"),svr.get("type")))
     if svr_clients is not None:
-        print "Service Clients: "
+        print("Service Clients: ")
         for svr in svr_clients:
-            print"    Name: %s Type: %s" %(svr.get("name"), svr.get("type"))
+            print("    Name: {0} Type: {1}".format(svr.get("name"),svr.get("type")))
 
 if __name__ == '__main__':
     try:
